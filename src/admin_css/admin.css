@@ -1,0 +1,220 @@
+.admin-container {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.admin-feature h3 {
+    margin-right: 10px;
+    width: fit-content;
+    margin-left: auto;
+    color: white;
+}
+
+.admin-feature {
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.feature-button {
+    height: 50px;
+    background: rgba(255, 255, 255, .4);
+    border: none;
+    border-top: 1px solid black;
+    text-align: start;
+}
+
+.admin-board {
+    margin: auto;
+    margin-top: 3em;
+    width: inherit;
+}
+
+
+.bot-data-input {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.3);
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.bot-data-input textarea {
+    height: 200px;
+    width: 200px;
+    padding: 1em;
+    resize: none;
+    margin: auto;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 5px;
+}
+
+.bot-data-input button {
+    width: 200px;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5em;
+    color: brown;
+    font-weight: bolder;
+    background-color: rgba(122, 122, 122, 0.3);
+}
+
+.update-bot {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.update-bot h3 {
+    text-align: center;
+}
+
+.upload-content {
+    padding: 3em;
+    display: flex;
+    grid-gap: 3em;
+    
+}
+
+
+.upload-content button {
+    margin-left: 0;
+    width: fit-content;
+    padding: 0.5em;
+    margin-top: 1em;
+    border: none;
+    background: rgba(255, 255, 255, .3);
+    color: white;
+    border-radius: 3px;
+}
+
+.to-upload {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    border-radius: 5px;
+    padding: 3em;
+}
+
+
+.upload-content input {
+    display: none;
+}
+
+.upload-content label {
+    background: rgba(0, 0, 0, .3);
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+#to-upload-material {
+    background: #4ed14e;
+}
+
+#to-upload-timetable {
+    background: #df5959;
+}
+
+.student-account {
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.4);
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    justify-content: space-evenly;
+    padding: 2em;
+    border-radius: 5px;
+}
+
+.student-account input {
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    padding: 10px;
+
+}
+
+.student-account button {
+    background-color: rgba(122, 122, 122, 0.3);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5em;
+    color: brown;
+    font-weight: bolder;
+}
+
+
+.student-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: inherit;
+   
+
+}
+.student-stats {
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    border-radius: 5px;
+    height: fit-content;
+    width: 100px;
+    background: #4ed14e;
+    text-align: center;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .4);
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+.registering, .training, .uploading {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.registering p, .training p, .uploading p {
+    margin: 0;
+    color: brown;
+    font-weight: bolder;
+}
+
+.reg-res, .train-res {
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+
+.bot-data-input input {
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, .5);
+    padding: 10px;
+    margin-top: 20px;
+
+}

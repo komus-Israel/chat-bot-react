@@ -1,0 +1,146 @@
+.student-dashboard {
+    display: flex;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.student-details {
+    background: brown;
+    height: 80%;
+    border-radius: 20px;
+    margin: 1em;
+    width: 170px;
+}
+
+.student-menu {
+    background: rgb(230, 73, 73);
+    margin-top: 5em;
+    height: inherit;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: white;
+}
+
+.student-menu p {
+    text-align: center;
+}
+
+.student-name {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.student-name p {
+    text-align: center;
+    margin: 0;
+    font-size: 12px;
+}
+
+.student-name h3 {
+    text-align: center;
+    margin-bottom: 0;
+    
+}
+
+.flex-2 {
+    display: flex;
+}
+
+.flex-2 .chat-bot {
+    margin:1em;
+    border:none;
+    border-radius: 20px;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    padding: 1em;
+    overflow: auto;
+    width: 300px;
+    position: relative;
+    height: 70%;
+    background: rgb(225, 225, 160);
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.chat-bot iframe {
+    height: inherit;
+    border: none;
+}
+
+.bot-message {
+    background: rgb(230, 73, 73);
+    width: 150px;
+    font-size: 13px;
+    border-radius: 20px;
+    padding: 1em;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+}
+
+.student-message {
+    width: 150px;
+    font-size: 13px;
+    margin-left: auto;
+    border-radius: 20px;
+    padding: 1em;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+}
+
+.type-message {
+   
+    width: inherit;
+    border-radius: 50px;
+    padding: 0;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    background: rgb(225, 225, 160);
+    padding-right: 20px;
+}
+
+.type-message div {
+    margin:auto;
+    resize: none;
+    margin-top: 10px;
+    overflow: hidden;
+    border: none;
+    width: 200px;
+    outline-color: none;
+    outline: none;
+    
+}
+
+.type-message textarea {
+    margin:auto;
+    resize: none;
+    margin-top: 10px;
+    overflow: hidden;
+    border: none;
+    width: 200px;
+    outline-color: none;
+    outline: none;
+    background: inherit;
+    
+}
+
+.type-message p {
+    font-weight: bold;
+
+}
+
+.send-chat {
+    border: none;
+    background: inherit;
+    font-weight: bolder;
+}
