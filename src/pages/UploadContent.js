@@ -13,12 +13,14 @@ const UploadContent =()=>{
         setUploading(true)
         e.preventDefault()
         const formData = new FormData()
+        const api = 'https://uirms.herokuapp.com/sms/upload'
+        //const api = 'http://127.0.0.1:5000/sms/upload'
 
         if (type === 'material'){
             formData.append('file',course)
 
             axios.post(
-                'http://127.0.0.1:5000/sms/upload', formData
+                api, formData
             ).then(res=>res.data)
             .then(data=>data.msg)
         
@@ -26,7 +28,7 @@ const UploadContent =()=>{
         } else {
             formData.append('file',timeTable)
             axios.post(
-                'http://127.0.0.1:5000/sms/upload', formData
+                api, formData
             ).then(res=>res.data)
             .then(data=>data.msg)
             

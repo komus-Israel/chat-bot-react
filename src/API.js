@@ -1,7 +1,8 @@
 
 import axios from "axios";
 
-const api = 'http://127.0.0.1:5000/sms'
+//const api = 'http://127.0.0.1:5000/sms'
+const api = 'https://uirms.herokuapp.com/sms/'
 
 const headers = {
     'Accept':'application/json'   
