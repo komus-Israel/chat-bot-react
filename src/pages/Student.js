@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../student_css/student.css';
 import * as API from '../API';
 import Messages from "../components/Messages";
+import SendFeedBack from "./SubmitFeedBack";
 
 
 
@@ -70,9 +71,7 @@ const Student =()=>{
                         
                 </div>
 
-                <div className='calender'>
-                    Calender
-                </div>
+               <SendFeedBack />
             </div>
         </div>
     )

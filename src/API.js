@@ -68,4 +68,25 @@ export const login=(data)=>
             body: JSON.stringify(data)
         }
     ).then(res=>res.json()).then(data=>data)
-    
+
+
+
+export const getFeedbacks=()=>
+    fetch(
+        `${api}/feedbacks`,
+        {headers},
+    ).then(res=>res.json()).then(data=>data.feedbacks) 
+
+
+export const submitFeedBack=(data)=>
+        fetch(
+        `${api}/student/feedback`,
+        {
+            method:'POST',
+            headers:{
+                ...headers,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }
+    ).then(res=>res.json()).then(data=>data.msg)

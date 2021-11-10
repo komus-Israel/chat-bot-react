@@ -1,0 +1,108 @@
+.feedback-cont {
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.3);
+    display: flex;
+    margin: 1em;
+    border-radius: 10px;
+    padding: 2em;
+    height: 300px;
+    justify-content: space-evenly;
+    
+}
+
+.feedback-list {
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    padding: 1em;
+    width: 40%;
+    background: rgb(48, 5, 89);
+}
+
+.feedback-list::-webkit-scrollbar {
+    width: 0px;
+}
+
+.briefer p{
+    margin: 0;
+}
+
+.briefer h4 {
+    margin-bottom: 0;
+}
+
+.briefer p {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.feedback-brief {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .5);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.feedback-msg {
+    font-size: 13px;
+}
+
+.feedback-details {
+    width: 40%;
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    padding: 1em;
+}
+
+
+.feedback-submit-cont {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 50px;
+}
+
+.feedback-submit-cont textarea {
+    resize: none;
+    padding: 10px;
+    border-radius: 10px;
+    height: inherit;
+}
+
+.feedback-submit-cont button {
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    background: rgb(48, 5, 89);
+    color: white;
+    margin-top: 10px;
+}
+
+.submitting {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.submitting img {
+    margin: auto;
+}
+
+
+.submitting  p{
+    color: white;
+    font-weight: bold;
+}
+
+.feedback-response {
+    text-align: center;
+}

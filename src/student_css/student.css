@@ -57,6 +57,15 @@
 
 .flex-2 {
     display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    margin-top: 1em;
+    border-radius: 10px;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+
+
 }
 
 .flex-2 .chat-bot {
