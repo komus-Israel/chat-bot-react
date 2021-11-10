@@ -14,24 +14,36 @@
 }
 
 .admin-feature {
-    background: #333;
+    background: rgb(19, 1, 36);
     display: flex;
     flex-direction: column;
     width: 200px;
+    
 }
 
 .feature-button {
     height: 50px;
-    background: rgba(255, 255, 255, .4);
     border: none;
-    border-top: 1px solid black;
-    text-align: start;
+    text-align: center;
+    color: rgb(225, 225, 160);
+    font-weight: lighter;
+    width: 100%;
+    background: transparent;
+}
+
+.button-cont {
+    background: rgb(48, 5, 89);
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .admin-board {
     margin: auto;
     margin-top: 3em;
     width: inherit;
+   
 }
 
 
@@ -62,9 +74,8 @@
     border-radius: 5px;
     color: white;
     padding: 0.5em;
-    color: brown;
+    background: rgb(70, 14, 75);
     font-weight: bolder;
-    background-color: rgba(122, 122, 122, 0.3);
 }
 
 .update-bot {
@@ -79,6 +90,7 @@
 
 .update-bot h3 {
     text-align: center;
+    color: rgb(19, 1, 36);
 }
 
 .upload-content {
@@ -95,8 +107,8 @@
     padding: 0.5em;
     margin-top: 1em;
     border: none;
-    background: rgba(255, 255, 255, .3);
-    color: white;
+    background: white;
+    color: rgb(19, 1, 36);
     border-radius: 3px;
 }
 
@@ -108,6 +120,9 @@
     padding: 3em;
 }
 
+.to-upload span {
+    color: white;
+}
 
 .upload-content input {
     display: none;
@@ -121,11 +136,11 @@
 }
 
 #to-upload-material {
-    background: #4ed14e;
+    background: rgb(48, 5, 89);
 }
 
 #to-upload-timetable {
-    background: #df5959;
+    background: rgb(19, 1, 36);
 }
 
 .student-account {
@@ -152,8 +167,9 @@
     border: none;
     border-radius: 5px;
     padding: 0.5em;
-    color: brown;
+    color: white;
     font-weight: bolder;
+    background: rgb(70, 14, 75);
 }
 
 
@@ -169,8 +185,9 @@
     border-radius: 5px;
     height: fit-content;
     width: 100px;
-    background: #4ed14e;
+    background: rgb(70, 14, 75);
     text-align: center;
+    color: white;
 }
 
 .modal {

@@ -13,14 +13,15 @@ code {
 }
 
 nav {
-  background: brown;
-  padding: 15px;
+  background: rgb(48, 5, 89);
   display: flex;
+  padding-right: 10px;
   
 }
 .nav-menu {
   margin-left: auto;
   text-decoration: none;
   color: white;
+  padding: 0;
   
 }

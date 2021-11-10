@@ -31,11 +31,15 @@ const AdminFeature=()=>{
                 <div >
                     <h3 >Admin</h3>
                 </div>
-                {
-                    boards.map((board)=>(
-                        <button className='feature-button' key={board.name} onClick={()=>handleClick(board.board)}>{board.name}</button>
-                    ))
-                }
+
+                <div className='button-cont'>
+                    {
+                        boards.map((board)=>(
+                            <button className='feature-button' key={board.name} onClick={()=>handleClick(board.board)}>{board.name}</button>
+                        ))
+                    }
+                </div>
+                
                 
             </div>
 

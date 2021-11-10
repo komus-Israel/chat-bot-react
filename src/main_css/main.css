@@ -1,0 +1,85 @@
+.homepage {
+    display: flex;
+    justify-content: space-between;
+    padding: 7em;
+   
+}
+
+.homepage h1 {
+    font-size: 5em;
+    color: rgb(19, 1, 36);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+}
+
+.homepage p {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.login-cont {
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+    width: 300px;
+    justify-content: space-evenly;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.6);
+    border-radius: 5px;
+}
+
+.login-cont input {
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.login-cont .button {
+    background-color: rgba(122, 122, 122, 0.3);
+    border: none;
+    border-radius: 5px;
+    padding-top: 0.5em;
+    color: white;
+    font-weight: bolder;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    background: rgb(48, 5, 89);
+}
+
+.modal-status {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+}
+
+.status-msg {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: inherit;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.status-msg p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+.logging-in {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+
+}

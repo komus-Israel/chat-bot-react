@@ -1,11 +1,17 @@
 import React from "react";
-import Header from "../components/Header";
+import Login from "../components/Login";
+import '../main_css/main.css';
 
 
 const HomePage =()=>{
     return (
-        <div>
-            <p>HomePage</p>
+        <div className='homepage'>
+            <div>
+                <h1>Welcome</h1>
+                <p>student management system</p>
+            </div>
+            
+            <Login />
         </div>
     )
 }

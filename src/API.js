@@ -53,3 +53,18 @@ export const chatBot=(msg)=>
             `${api}/chat?message=${msg}`,
             {headers},
         ).then(res=>res.json()).then(data=>data.response)
+
+
+export const login=(data)=>
+    fetch(
+        `${api}/login`,
+        {
+            method:'POST',
+            headers:{
+                ...headers,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }
+    ).then(res=>res.json()).then(data=>data)
+    
