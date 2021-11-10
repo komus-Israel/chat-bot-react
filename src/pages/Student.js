@@ -5,20 +5,7 @@ import Messages from "../components/Messages";
 
 
 
-const chats = [
-    {sender:'bot',message:'hi'},
-    {sender:'student',message:'hi'},
-    {sender:'bot',message:'hi'},
-    {sender:'student',message:'hi'},
-    {sender:'bot',message:'hi'},
-    {sender:'student',message:'hi'},
-    {sender:'bot',message:'hi'},
-    {sender:'student',message:'hi'},
-    {sender:'bot',message:'hi'},
-    {sender:'student',message:'hi'},
-    {sender:'bot',message:'hi'},
-    {sender:'student',message:'hi'},
-]
+const chats = []
 
 const Student =()=>{
 
