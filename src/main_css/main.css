@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     padding: 7em;
+    
    
 }
 
@@ -83,3 +84,42 @@
     width: fit-content;
 
 }
+
+@media only screen and (max-width:320px){
+    .login-cont {
+        width: 250px;
+    }
+
+
+
+}
+
+@media only screen and (max-width:600px){
+    .homepage {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: fixed;
+      padding: 100%;
+      top:50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+    }
+
+    .homepage h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .homepage p {
+        font-size: 10px;
+    }
+
+    .login-cont input {
+        height: 20px;
+    }
+
+    
+
+  }
