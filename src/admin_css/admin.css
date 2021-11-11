@@ -81,9 +81,14 @@
 .update-bot {
     display: flex;
     margin: auto;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    padding: 4em;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+
     
     
 }
@@ -215,7 +220,7 @@
 
 .registering p, .training p, .uploading p {
     margin: 0;
-    color: brown;
+    color: white;
     font-weight: bolder;
 }
 
@@ -234,4 +239,13 @@
     padding: 10px;
     margin-top: 20px;
 
+}
+
+.retrain-bot {
+    border: none;
+    background-color: rgb(70, 14, 75);
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
 }

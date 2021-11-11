@@ -103,3 +103,9 @@ export const getProfile=(jwt)=>
                 }
             },
         ).then(res=>res.json()).then(data=>data)
+
+export const reTrainBot=()=>
+            fetch(
+                `${api}/train-bot-with-no-update`,
+                {headers}
+            ).then(res=>res.json()).then(data=>data.msg)
