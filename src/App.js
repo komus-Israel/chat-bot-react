@@ -1,14 +1,16 @@
 import HomePage from "./pages/Homepage";
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Redirect, BrowserRouter} from 'react-router-dom';
 import Header from "./components/Header";
 import Admin from "./pages/Admin";
 import Student from "./pages/Student";
+
 
 function App() {
 
   return (
 
-      <Router>
+    <BrowserRouter>
+       <Router>
             <div className='main-container'>
             
               
@@ -16,10 +18,9 @@ function App() {
                 
                 
                 {/* Home page Router */}
-                <Route exact path='/'>
-                    <Header />  
-                    <HomePage />
-                </Route>
+                <Route exact path='/' component={HomePage} />
+                    
+          
 
                 <Route exact path='/dashboard/admin'>
                     <Header />
@@ -27,16 +28,24 @@ function App() {
                 </Route>
 
 
-                <Route exact path='/dashboard/student'>
-                    <Student />
-                </Route>
-
-
+                <Route exact path='/dashboard/student' render={
+                      props=> {
+                          if (!localStorage.getItem('token')){
+                            return <Redirect to= '/'
+                            />
+                          } else {
+                            return <Student />
+                          }
+                      }
+                    }
+                  />
               </Switch>
               
             </div>
       </Router>
-      
+    </BrowserRouter>
+     
+    
   )
 }
 

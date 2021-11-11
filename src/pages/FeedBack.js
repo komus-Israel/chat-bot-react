@@ -7,9 +7,7 @@ const FeedBack =()=>{
     const [feedBacks, setFeedback] = useState([])
     const [currentlyReading, setCurrentlyReading] = useState('')
 
-    const feedBackClick=async()=>{
-
-    }
+    
 
 
     useEffect(()=>{

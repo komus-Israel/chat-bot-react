@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as API from '../API';
 import LoginStatus from "./LoginStatus";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 
-const Login=()=>{
+const Login=(props)=>{
 
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
     const [loginStatus, setLoginStatus] = useState('')
     const [loggingIn, setLoggingIn] = useState(false);
+   
+    
 
     const handleLogin=async()=>{
     
@@ -25,18 +27,26 @@ const Login=()=>{
 
             setLoggingIn(false)
 
-            console.log(login)
+            if (login.status === 'success'){
+                console.log('success')
+                localStorage.setItem('token', login.access_token)
+                localStorage.setItem('role', login.role)
+                return props.props.history.push('/dashboard/student')
+            }
+        
+
        }
-
-       
-
        
     }
+
+
+    
     return(
         <div className='login-cont'>
             <input placeholder='ID' value={id} onChange={(e)=>setId(e.target.value)}/>
             <input placeholder='password' value={password} onChange={(e)=>setPassword(e.target.value)}/>
-            <Link className='button' onClick={handleLogin} to= {loginStatus==='success' && '/dashboard/student'} >Login</Link>
+            {/*<Link className='button' onClick={handleLogin} to= {loginStatus==='success' && '/dashboard/student'} >Login</Link>*/}
+            <button className='button' onClick={handleLogin}>Login</button>
 
             <div onClick={()=>setLoginStatus('')}>
                 {

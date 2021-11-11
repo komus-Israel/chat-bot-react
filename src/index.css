@@ -18,10 +18,13 @@ nav {
   padding-right: 10px;
   
 }
-.nav-menu {
+nav .nav-menu-h3, nav .nav-menu-link {
   margin-left: auto;
   text-decoration: none;
   color: white;
-  padding: 0;
-  
+
+}
+
+nav .nav-menu-link {
+  padding: 10px;
 }

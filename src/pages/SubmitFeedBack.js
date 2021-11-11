@@ -8,14 +8,15 @@ const SendFeedBack=()=>{
     const [feedBack, setFeedBack] = useState('')
     const [submitting, setSubmitting] = useState(false)
     const [submitResponse, setSubmitResponse] = useState('')
+    
 
     const handleFeedBack=async()=>{
 
         if (feedBack.length > 0){
             setSubmitting(true)
-            const data = await {feedback: feedBack, id: '20067'}
+            const data = await {feedback: feedBack}
     
-            const response = await API.submitFeedBack(data)
+            const response = await API.submitFeedBack(data, localStorage.getItem('token'))
             setSubmitResponse(response)
             setSubmitting(false)
         }
@@ -27,7 +28,9 @@ const SendFeedBack=()=>{
         <div className='feedback-submit-cont'>
 
              {
-                submitResponse.length > 0 && <p className='feedback-response' onClick={()=>setSubmitResponse('')}>{submitResponse}</p>
+                submitResponse.length > 0 && <div className='modal' onClick={()=>setSubmitResponse('')}>
+                    <p className='feedback-response' onClick={()=>setSubmitResponse('')}>{submitResponse}</p>
+                </div>
             }
             <textarea value={feedBack} onChange={(e)=>setFeedBack(e.target.value)}></textarea>
             <button onClick={()=>handleFeedBack(feedBack)}>submit</button>

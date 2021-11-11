@@ -78,15 +78,28 @@ export const getFeedbacks=()=>
     ).then(res=>res.json()).then(data=>data.feedbacks) 
 
 
-export const submitFeedBack=(data)=>
+export const submitFeedBack=(data, jwt)=>
         fetch(
         `${api}/student/feedback`,
         {
             method:'POST',
             headers:{
                 ...headers,
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization' : 'Bearer ' + jwt
             },
             body: JSON.stringify(data)
         }
     ).then(res=>res.json()).then(data=>data.msg)
+
+
+export const getProfile=(jwt)=>
+        fetch(
+            `${api}/student/profile`,
+            {
+                headers:{
+                    ...headers,
+                    'Authorization' : 'Bearer ' + jwt
+                }
+            },
+        ).then(res=>res.json()).then(data=>data)

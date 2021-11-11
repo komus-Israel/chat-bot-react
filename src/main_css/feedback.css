@@ -105,4 +105,12 @@
 
 .feedback-response {
     text-align: center;
+    width: 100%;
+    background: white;
+    height: fit-content;
+    padding: 2em;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

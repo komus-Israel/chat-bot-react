@@ -3,6 +3,7 @@ import '../student_css/student.css';
 import * as API from '../API';
 import Messages from "../components/Messages";
 import SendFeedBack from "./SubmitFeedBack";
+import { Link, Redirect } from "react-router-dom";
 
 
 
@@ -12,6 +13,7 @@ const Student =()=>{
 
     const [message, setMessage] = useState('')
     const [botMessage, setBotMessage] = useState()
+    const [profile, setProfile] = useState({})
     
    
     const handleChat=async(msg)=>{
@@ -23,7 +25,21 @@ const Student =()=>{
         chats.push({sender:'bot', message:botMsg})
         setMessage(' ')
              
-    }
+    } 
+
+    
+
+
+    useEffect(()=>{
+        const jwt = localStorage.getItem('token')
+        const getProfileFromApi = async()=>{
+            const profileResponse = await API.getProfile(jwt)
+            setProfile(profileResponse.student_profile)
+            
+        }
+
+        getProfileFromApi()
+    }, [])
 
     
    
@@ -31,9 +47,9 @@ const Student =()=>{
         <div className='student-dashboard'>
             <div className='student-details'>
                 <div className='student-name'>
-                    <h3>Ajayi Abodunrin</h3>
-                    <p>student</p>
-                    <p>256993</p>
+                    <h2>{profile.name}</h2>
+                    <p>{localStorage.getItem('role')}</p>
+                    <p>{profile.matric_no}</p>
                 </div>
 
 
@@ -72,6 +88,8 @@ const Student =()=>{
                 </div>
 
                <SendFeedBack />
+
+               
             </div>
         </div>
     )
