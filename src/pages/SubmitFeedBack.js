@@ -26,6 +26,7 @@ const SendFeedBack=()=>{
 
     return(
         <div className='feedback-submit-cont'>
+            <p>sdbdfbdfbdfbxfbdfnfgxnx</p>
 
              {
                 submitResponse.length > 0 && <div className='modal' onClick={()=>setSubmitResponse('')}>
@@ -45,14 +46,7 @@ const SendFeedBack=()=>{
                     </div>
                     
                 )
-            }
-
-
-            
-               
-
-                 
-            
+            }   
             
         </div>
     )

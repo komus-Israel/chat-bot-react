@@ -90,6 +90,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    
 
 }
 
@@ -100,10 +101,10 @@
 
 .bot-message {
     
-    width: 150px;
+    width: 180px;
     font-size: 13px;
     border-radius: 20px;
-    padding: 1em;
+    padding: 0.5em;
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
 }
 
@@ -165,4 +166,128 @@
     border: none;
     background: inherit;
     font-weight: bolder;
+}
+
+.mobile {
+    display: none;
+}
+@media only screen and (max-width:600px){
+
+    .student-dashboard {
+
+        flex-direction: column;
+        
+
+    }
+
+    .student-details {
+        flex-direction: row;
+        width: 100%;
+        height: fit-content;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        border-radius: 0;
+        
+    }
+
+    .student-name div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+        
+    }
+
+    .student-name {
+        margin-top: 0;
+        height: fit-content;
+        background: rgb(19, 1, 36);
+        border-radius: 50px;
+        padding: 0.5em;
+        margin: 0.5em;
+        width: 50%;
+    }
+
+
+
+
+    .student-menu {
+        flex-direction: row;
+        height: fit-content;
+        padding: 0;
+        background: transparent;
+        justify-content: space-evenly;
+        width: 50%;
+        
+        
+    }
+
+    .student-name h2{
+        font-size: 15px;
+    }
+
+    .feedback-submit-cont {
+        display: none;
+    }
+
+    .flex-2 {
+        display: none;
+    }
+
+    .mobile .chat-bot {
+        width: auto;
+    }
+
+    .type-message {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 5px;
+        padding: 0.3em;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 10px;
+        height: 10%;
+        
+    }
+
+    .send-chat {
+        border-radius: inherit;
+    }
+
+    .mobile .chat-bot {
+        height: 65%;
+        padding: 1em;
+        overflow: auto;
+        background: inherit;
+        
+       
+    }
+
+    .mobile {
+        display: flex;
+        width: 100%;
+        background:inherit;
+        height: 100%;
+        box-shadow: none;
+        border-radius: 0;
+        justify-content: center;
+        flex-direction: column;
+       
+    }
+
+    .mobile .chat-bot::-webkit-scrollbar {
+        width: 0px;
+    }
+    
+
+}
+
+
+@media only screen and (max-width:600px){
+
+
+
+
 }

@@ -1,5 +1,6 @@
 import React from "react";
 
+
 const LoginStatus=({status})=>{
     return (
         <div className='modal-status'>
