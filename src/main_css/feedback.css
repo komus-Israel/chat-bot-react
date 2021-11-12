@@ -116,10 +116,20 @@
 }
 
 
+
 @media only screen and (max-width:600px){
 
     .feedback-submit-cont {
-        background-color: red;
+        position: absolute;
+        width: 80%;
+        height: 200px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: auto;
+        padding: 100%;
+        
     }
 
+    
 }

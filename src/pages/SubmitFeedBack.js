@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import '../main_css/feedback.css';
 import * as API from '../API';
 
@@ -26,7 +26,6 @@ const SendFeedBack=()=>{
 
     return(
         <div className='feedback-submit-cont'>
-            <p>sdbdfbdfbdfbxfbdfnfgxnx</p>
 
              {
                 submitResponse.length > 0 && <div className='modal' onClick={()=>setSubmitResponse('')}>

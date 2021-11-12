@@ -27,12 +27,12 @@ const ChatContainer=({message, setMessage, handleChat})=>{
     )
 }
 
-const Student =()=>{
+const Student=()=>{
 
     const [message, setMessage] = useState('')
-    const [botMessage, setBotMessage] = useState()
+    //const [botMessage, setBotMessage] = useState()
     const [profile, setProfile] = useState({})
-    const [view, setVIew] = useState('feedback')
+    const [ui, setUI] = useState('chat')
     
    
     const handleChat=async(msg)=>{
@@ -45,6 +45,10 @@ const Student =()=>{
         setMessage(' ')
              
     } 
+
+    const handleView=(view)=>{
+        setUI(view)
+    }
 
     
 
@@ -76,36 +80,32 @@ const Student =()=>{
 
 
                 <div className='student-menu'>
-                    <p onClick={()=>setVIew('chat')}>Chat</p>
-                    <p onClick={()=>setVIew('feedback')}>Feedback</p>
-                </div>  
+                    <p onClick={()=>handleView('chat')}>Chat</p>
+                    <p onClick={()=>handleView('')}>Feedback</p>
+    </div> 
             </div>
 
 
             <div className='flex-2'>
                     <ChatContainer message={message} setMessage={setMessage} handleChat={handleChat} />
-               <SendFeedBack />
+                    <SendFeedBack />
                
             </div>
 
 
             <div className='mobile' >
                    {
-                       view === 'chat' ? (
+                       ui.length > 0 ? (
                             <ChatContainer message={message} setMessage={setMessage} handleChat={handleChat} />
                             
-                       ) : 
+                       ) :        
+            
+                       <SendFeedBack />          
                        
-                       view === 'feedback' && (
-                               <div>
-                                   <p>okay</p>
-                                   <SendFeedBack />
-                               </div>
-                       ) 
-                   }
-
+                       }       
 
             </div>
+
         </div>
     )
 }
