@@ -160,6 +160,14 @@
 .mobile {
     display: none;
 }
+
+.chat-button {
+    border:none;
+    border-radius: 30px;
+    background: rgb(225, 225, 160);
+    margin-top: 10px;
+    padding: 10px;
+}
 @media only screen and (max-width:600px){
 
     .student-dashboard {

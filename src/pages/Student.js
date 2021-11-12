@@ -39,7 +39,7 @@ const Student=()=>{
         await setMessage('')
 
         const botMsg = await API.chatBot(msg)       
-        chats.push({sender:'bot', message:botMsg})
+        chats.push({sender:'bot', message:botMsg.response, patterns:botMsg.available_patterns})
         setMessage(' ')
 
 
@@ -55,7 +55,17 @@ const Student=()=>{
             
         }
 
+        const getFirstResponse=async()=>{
+            const first_message = await API.chatBot('hello')
+            chats.push({sender:'bot', message:first_message.response, patterns:first_message.available_patterns})
+            setMessage(' ')
+            console.log(chats)
+        }
+
+        
         getProfileFromApi()
+        getFirstResponse()
+
     }, [])
 
     

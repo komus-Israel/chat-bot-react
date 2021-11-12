@@ -4,7 +4,7 @@ import rehypeRaw from "rehype-raw";
 
 
 
-const Messages=({msgs})=>{
+const Messages=({msgs, handleChat})=>{
 
 
 
@@ -31,11 +31,26 @@ const Messages=({msgs})=>{
                         <div key={index}>
                             {
                                 chatMsg.sender === 'student' ? <p className='student-message'>{chatMsg.message}</p> :
-                                chatMsg.sender === 'bot' &&  <div className='bot-message'>
-                                    <ReactMarkdown children={chatMsg.message} rehypePlugins={[rehypeRaw]}/>
-                                    
-                                    </div>
+                                chatMsg.sender === 'bot' &&  <div>
+                                                                     <div className='bot-message'>
+                                                                            <ReactMarkdown children={chatMsg.message} rehypePlugins={[rehypeRaw]}/>
+                                                                     </div>
+
+                                                                     <div>
+                                                                            {
+                                                                                chatMsg.patterns.length > 0 && chatMsg.patterns.map((patterns,index)=>(
+                                                                                    <button onClick={()=>handleChat(patterns)} className='chat-button' key={index}>{patterns}</button>
+                                                                                ))
+                                                                            }
+                                                                     </div>
+                                                                    
+
+                                                            </div>
+                                
+                               
                             }
+
+                            
                         </div>
                     )
                 })

@@ -53,7 +53,7 @@ export const chatBot=(msg)=>
         fetch(
             `${api}/chat?message=${msg}`,
             {headers},
-        ).then(res=>res.json()).then(data=>data.response)
+        ).then(res=>res.json()).then(data=>data)
 
 
 export const login=(data)=>
