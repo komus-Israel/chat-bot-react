@@ -31,8 +31,18 @@ const Student=()=>{
 
     const [message, setMessage] = useState('')
     //const [botMessage, setBotMessage] = useState()
-    const [profile, setProfile] = useState({})
-    const [ui, setUI] = useState('chat')
+    const [profile, setProfile] = useState({});
+    const [uiView, setUI] = useState('chat');
+
+
+    const handleView=(view)=>{
+        setUI(view)
+    }
+
+    const ui = [
+        {name:'chat'},
+        {name:'feedback'}
+    ]
     
    
     const handleChat=async(msg)=>{
@@ -43,15 +53,11 @@ const Student=()=>{
         const botMsg = await API.chatBot(msg)       
         chats.push({sender:'bot', message:botMsg})
         setMessage(' ')
+
+
+       
              
     } 
-
-    const handleView=(view)=>{
-        setUI(view)
-    }
-
-    
-
 
     useEffect(()=>{
         const jwt = localStorage.getItem('token')
@@ -80,9 +86,20 @@ const Student=()=>{
 
 
                 <div className='student-menu'>
-                    <p onClick={()=>handleView('chat')}>Chat</p>
-                    <p onClick={()=>handleView('')}>Feedback</p>
-    </div> 
+
+                    {
+                        ui.map((name)=>{
+                            return(
+                                <button key={name.name} onClick={()=>{
+                                    handleView(name.name)
+                                    console.log(name.name)
+                                }
+                                    }>{name.name}</button>
+                            )
+                        })
+                    }
+    
+                 </div> 
             </div>
 
 
@@ -95,14 +112,11 @@ const Student=()=>{
 
             <div className='mobile' >
                    {
-                       ui.length > 0 ? (
-                            <ChatContainer message={message} setMessage={setMessage} handleChat={handleChat} />
-                            
-                       ) :        
+                       uiView === 'chat' ? <ChatContainer message={message} setMessage={setMessage} handleChat={handleChat} />:        
             
-                       <SendFeedBack />          
+                       uiView === 'feedback' && <SendFeedBack />          
                        
-                       }       
+                 }       
 
             </div>
 

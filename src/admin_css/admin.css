@@ -249,3 +249,45 @@
     color: white;
     border-radius: 5px;
 }
+
+
+@media only screen and (max-width:600px){
+
+    .admin-container {
+        flex-direction: column;
+    }
+    .admin-feature {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .button-cont {
+        flex-direction: row;
+        background: transparent;
+    }
+
+    .feature-button {
+        font-size: 10px;
+        
+    }
+
+    .feature-button:hover {
+        background: rgb(48, 5, 89);
+    }
+
+    .student-container {
+        flex-direction: column;
+        width: 100%; 
+    }
+
+    .student-account {
+        width: 80%;
+        margin: auto;
+    }
+
+    .student-stats {
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+}

@@ -27,7 +27,7 @@ const HomePage =(props)=>{
             <div className='homepage'>
                 <div>
                     <h1>Welcome</h1>
-                    <p>student management system</p>
+                    <p>Department of Computer Science</p>
                 </div>
 
                 {

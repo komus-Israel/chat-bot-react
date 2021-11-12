@@ -22,7 +22,7 @@ const Header =()=>{
             {
                 role === 'student' ? <Link to='/dashboard/student' className='nav-menu-link'>Dashboard</Link> :
                 role === 'admin' ? <Link  to='/dashboard/admin' className='nav-menu-link'>Dashboard</Link> :
-                <h3 className='nav-menu-h3'>SMS</h3>
+                <h3 className='nav-menu-h3'>DCS</h3>
             }
            
         </nav>
