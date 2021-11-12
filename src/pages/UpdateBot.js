@@ -28,7 +28,7 @@ const UpdateBot=()=>{
     }
     return (
         <div className='update-bot'>
-            <button  className='retrain-bot' onClick={reTrainBotWithNoData}>Retrain bot without additional data</button>
+            <button  className='retrain-bot' onClick={reTrainBotWithNoData}>click to retrain bot without additional data</button>
             
             <div className='bot-data-input'>
                 <input placeholder='tag' value={tag} onChange={(e)=>setTag(e.target.value)}/>

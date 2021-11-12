@@ -22,27 +22,51 @@ const FeedBack =()=>{
 
 
     return (
-        <div className='feedback-cont'>
-           <div className='feedback-list'>
-               {
-                   feedBacks.map((feed, index)=>{
-                       return(
-                        <div className='feedback-brief' key={index} onClick={()=>setCurrentlyReading(feed.feedback)}>
-                            <div className='briefer'>
-                                <h4>{feed.name}</h4>
-                                <p>{feed.matric_no}</p>
-                            </div>  
-                            <p className='feedback-msg'>{feed.feedback}</p>
-                        </div>
-                       )
-                   })
-               }
+        <div>
+            <div className='feedback-cont'>
+                <div className='feedback-list'>
+                    {
+                        feedBacks.map((feed, index)=>{
+                            return(
+                                <div className='feedback-brief' key={index} onClick={()=>setCurrentlyReading(feed.feedback)}>
+                                    <div className='briefer'>
+                                        <h4>{feed.name}</h4>
+                                        <p>{feed.matric_no}</p>
+                                    </div>  
+                                    <p className='feedback-msg'>{feed.feedback}</p>
+                                </div>
+                            )
+                        })
+                    }
+                    </div>
+
+                <div className='feedback-details'>
+                        <p>{currentlyReading}</p>
+                </div>
+
             </div>
 
-           <div className='feedback-details'>
-                <p>{currentlyReading}</p>
+
+            <div className='feedback-mobile'>
+                <div className='mobile-bg'>
+                    {
+                            feedBacks.map((feed, index)=>{
+                                return(
+                                    <div className='feedback-brief' key={index} onClick={()=>setCurrentlyReading(feed.feedback)}>
+                                        <div className='briefer'>
+                                            <h4>{feed.name}</h4>
+                                            <p>{feed.matric_no}</p>
+                                        </div>  
+                                        <p className='feedback-msg'>{feed.feedback}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                </div>
+                
            </div>
         </div>
+        
     )
 }
 

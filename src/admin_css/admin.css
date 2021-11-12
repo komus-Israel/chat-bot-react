@@ -288,6 +288,39 @@
     .student-stats {
         margin-left: 10px;
         margin-bottom: 10px;
+        margin-top: 10px;
     }
+
+    .update-bot {
+        flex-direction: column;
+        width: auto;
+        box-shadow: none;
+       
+    }
+
+    .retrain-bot {
+        margin-bottom: 1em;
+        width: auto;
+    }
+
+    .bot-data-input {
+        margin: auto;
+        width: auto;
+        
+    }
+
+    .upload-content {
+        flex-direction: column;
+    }
+
+    .to-upload span {
+        font-size: 10px;
+    }
+
+    .admin-board {
+        margin-top: 0;
+    }
+
+   
 
 }

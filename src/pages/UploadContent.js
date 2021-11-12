@@ -47,7 +47,7 @@ const UploadContent =()=>{
                 
                     <form onSubmit={(e)=>handleFileUpload(e,'material')}>
                         <div className='to-upload' id='to-upload-material'>
-                            <span>Upload Course Materials: <input type='file' id='material' onChange={e=>setCourse(e.target.files[0])}/><label htmlFor='material'>select file</label></span>
+                            <span>Upload Materials: <input type='file' id='material' onChange={e=>setCourse(e.target.files[0])}/><label htmlFor='material'>select file</label></span>
                             
                             <button>upload material</button>
                         </div>

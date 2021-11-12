@@ -131,5 +131,25 @@
         
     }
 
+    .feedback-cont {
+        display: none;
+    }
+
+    .feedback-mobile {
+        background: rgb(48, 5, 89);
+        margin-top: 0;
+        position: fixed;
+        top: auto;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .mobile-bg {
+        margin-top: 3em;
+    }
+
+    .feedback-brief {
+        border-radius: 0;
+    }
     
 }
