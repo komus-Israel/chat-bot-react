@@ -215,10 +215,9 @@
     .student-menu {
         flex-direction: row;
         height: fit-content;
-        padding: 0;
-        background: transparent;
         justify-content: space-evenly;
         width: 50%;
+        background: transparent;
         
         
     }
@@ -275,6 +274,10 @@
 
     .mobile .chat-bot::-webkit-scrollbar {
         width: 0px;
+    }
+
+    button {
+        cursor: pointer;
     }
     
 

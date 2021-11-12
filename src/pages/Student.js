@@ -4,44 +4,32 @@ import '../main_css/feedback.css';
 import * as API from '../API';
 import Messages from "../components/Messages";
 import SendFeedBack from "./SubmitFeedBack";
+import ChatContainer from "../components/ChatContainer";
 
 
 
 
 const chats = []
 
-const ChatContainer=({message, setMessage, handleChat})=>{
-    return (
-        <div className='chat-container'>    
-                    <div className='chat-bot'>
-                        <Messages msgs={chats}/>    
-                    </div>
-                    <div className='type-message'>
-                       <textarea value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
-                        <button className='send-chat' onClick={()=>message.length > 0 && handleChat(message)}>send</button>
-                       
-                    </div>
-                    
-                        
-            </div>
-    )
-}
+
 
 const Student=()=>{
 
     const [message, setMessage] = useState('')
     //const [botMessage, setBotMessage] = useState()
     const [profile, setProfile] = useState({});
-    const [uiView, setUI] = useState('chat');
+    const [chat, setChat] = useState(true);
 
 
     const handleView=(view)=>{
-        setUI(view)
+        return setChat(view)
     }
 
     const ui = [
-        {name:'chat'},
-        {name:'feedback'}
+       
+        {name:'Chat', state:true},
+        {name:'Report', state:false}
+       
     ]
     
    
@@ -88,23 +76,22 @@ const Student=()=>{
                 <div className='student-menu'>
 
                     {
-                        ui.map((name)=>{
-                            return(
-                                <button key={name.name} onClick={()=>{
-                                    handleView(name.name)
-                                    console.log(name.name)
-                                }
-                                    }>{name.name}</button>
+                        ui.map((name, index)=>(
+                                <p key={index} onClick={()=>handleView(name.state)}>{name.name}</p>
                             )
-                        })
+                        )
                     }
+
+                   
     
                  </div> 
             </div>
 
+            
+
 
             <div className='flex-2'>
-                    <ChatContainer message={message} setMessage={setMessage} handleChat={handleChat} />
+                    <ChatContainer message={message} setMessage={setMessage} handleChat={handleChat} chats={chats} />
                     <SendFeedBack />
                
             </div>
@@ -112,12 +99,12 @@ const Student=()=>{
 
             <div className='mobile' >
                    {
-                       uiView === 'chat' ? <ChatContainer message={message} setMessage={setMessage} handleChat={handleChat} />:        
-            
-                       uiView === 'feedback' && <SendFeedBack />          
-                       
-                 }       
 
+                        chat ? <ChatContainer message={message} setMessage={setMessage} handleChat={handleChat} chats={chats} />:
+                        !chat && <SendFeedBack />
+               
+                       
+                   }       
             </div>
 
         </div>

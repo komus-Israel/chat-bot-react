@@ -115,6 +115,10 @@
     transform: translate(-50%, -50%);
 }
 
+.mobile-bg {
+    display: none;
+}
+
 
 
 @media only screen and (max-width:600px){
@@ -128,6 +132,8 @@
         transform: translate(-50%, -50%);
         margin: auto;
         padding: 100%;
+        z-index: -100000;
+        
         
     }
 
@@ -137,15 +143,14 @@
 
     .feedback-mobile {
         background: rgb(48, 5, 89);
-        margin-top: 0;
-        position: fixed;
-        top: auto;
+        position: absolute;
         height: 100%;
-        overflow: auto;
+        overflow: scroll;
     }
 
     .mobile-bg {
-        margin-top: 3em;
+        display: block;
+        height: 100%;
     }
 
     .feedback-brief {

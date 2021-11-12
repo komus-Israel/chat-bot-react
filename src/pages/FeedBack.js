@@ -22,7 +22,7 @@ const FeedBack =()=>{
 
 
     return (
-        <div>
+        <div className='main-feed-back-cont'>
             <div className='feedback-cont'>
                 <div className='feedback-list'>
                     {
