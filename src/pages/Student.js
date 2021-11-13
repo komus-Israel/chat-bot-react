@@ -59,7 +59,6 @@ const Student=()=>{
             const first_message = await API.chatBot('hello')
             chats.push({sender:'bot', message:first_message.response, patterns:first_message.available_patterns})
             setMessage(' ')
-            console.log(chats)
         }
 
         
