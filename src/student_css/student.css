@@ -7,13 +7,16 @@
 
 .student-details {
     background: rgb(48, 5, 89);
-    height: 80%;
-    border-radius: 20px;
+    height: fit-content;
+    border-radius: 50%;
     margin: 1em;
-    width: 170px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    /*justify-content: space-evenly;*/
     
 }
 
@@ -29,6 +32,7 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
     color: rgb(225, 225, 160);
+    display: none;
 }
 
 .student-menu p {
@@ -40,7 +44,6 @@
     display: flex;
     flex-direction: column;
     height: 30%;
-    margin-top: 2em;
 }
 
 .student-name p {
@@ -164,7 +167,7 @@
 .chat-button {
     border:none;
     border-radius: 30px;
-    background: rgb(225, 225, 160);
+    background: white;
     margin-top: 10px;
     padding: 10px;
 }
@@ -210,6 +213,7 @@
 
 
     .student-menu {
+        display: flex;
         flex-direction: row;
         height: fit-content;
         justify-content: space-evenly;
@@ -279,6 +283,10 @@
 
     button {
         cursor: pointer;
+    }
+
+    .chat-button {
+        background:rgb(225, 225, 160);
     }
     
 

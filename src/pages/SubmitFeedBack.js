@@ -32,7 +32,7 @@ const SendFeedBack=()=>{
                     <p className='feedback-response' onClick={()=>setSubmitResponse('')}>{submitResponse}</p>
                 </div>
             }
-            <textarea value={feedBack} onChange={(e)=>setFeedBack(e.target.value)}></textarea>
+            <textarea placeholder='report feedback' value={feedBack} onChange={(e)=>setFeedBack(e.target.value)}></textarea>
             <button onClick={()=>handleFeedBack(feedBack)}>submit</button>
 
             {
