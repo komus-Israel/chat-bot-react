@@ -13,7 +13,7 @@ const chats = []
 
 
 
-const Student=()=>{
+const Student=(props)=>{
 
     const [message, setMessage] = useState('')
     //const [botMessage, setBotMessage] = useState()
@@ -33,14 +33,26 @@ const Student=()=>{
     ]
     
    
-    const handleChat=async(msg)=>{
+    const handleChat=async(msg, use_details)=>{
         
-        await chats.push({sender:'student', message:msg})
-        await setMessage('')
+        
+        if (use_details === true){
+            await chats.push({sender:'student', message:msg.name})
+            await setMessage('')
 
-        const botMsg = await API.chatBot(msg)       
-        chats.push({sender:'bot', message:botMsg.response, patterns:botMsg.available_patterns})
-        setMessage(' ')
+            chats.push({sender:'bot', message:msg.details, options:[], use_details:false})
+            setMessage(' ')
+        } else {
+            await chats.push({sender:'student', message:msg})
+            await setMessage('')
+            const botMsg = await API.chatBot(msg)       
+            chats.push({sender:'bot', message:botMsg.response, options:botMsg.options, use_details:botMsg.use_details})
+            setMessage(' ')
+    
+            
+        }
+
+        
 
 
        
@@ -55,15 +67,18 @@ const Student=()=>{
             
         }
 
-        const getFirstResponse=async()=>{
+        /*const getFirstResponse=async()=>{
             const first_message = await API.chatBot('hello')
-            chats.push({sender:'bot', message:first_message.response, patterns:first_message.available_patterns})
+            chats.push({sender:'bot', message:first_message.response, options:first_message.options})
             setMessage(' ')
-        }
+        }*/
 
         
         getProfileFromApi()
-        getFirstResponse()
+        //getFirstResponse()
+        //chats.push({sender:'bot', message:'Hello', options:[], use_details:false})
+
+        
 
     }, [])
 
@@ -78,6 +93,11 @@ const Student=()=>{
                         <p>{localStorage.getItem('role')}</p>
                         <p>{profile.matric_no}</p>
                     </div>
+
+                    <p className='logout' onClick={()=>{
+                        localStorage.clear('token', 'role')
+                        console.log(props.props.history.push('/'))
+                    }}>logout</p>
                     
                 </div>
 

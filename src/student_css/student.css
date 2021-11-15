@@ -156,7 +156,6 @@
 
 .send-chat {
     border: none;
-    background: inherit;
     font-weight: bolder;
 }
 
@@ -170,6 +169,12 @@
     background: white;
     margin-top: 10px;
     padding: 10px;
+}
+
+.logout {
+    color: white;
+    padding: 10px;
+    cursor: pointer;
 }
 @media only screen and (max-width:600px){
 
@@ -257,7 +262,7 @@
     }
 
     .mobile .chat-bot {
-        height: 80%;
+        height: 65%;
         padding: 1em;
         overflow: auto;
         background: inherit;
@@ -287,6 +292,11 @@
 
     .chat-button {
         background:rgb(225, 225, 160);
+    }
+
+    .bot-message li {
+        list-style: none;
+        padding: 5px;
     }
     
 

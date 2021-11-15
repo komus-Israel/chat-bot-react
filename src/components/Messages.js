@@ -22,7 +22,10 @@ const Messages=({msgs, handleChat})=>{
         }
     }
 
-    useEffect(()=>updateMessageList())
+    useEffect(()=>{
+        updateMessageList()
+       
+    })
     return(
         <div ref={messageList}>
             {
@@ -38,10 +41,10 @@ const Messages=({msgs, handleChat})=>{
 
                                                                      <div>
                                                                             {
-                                                                                chatMsg.patterns.length > 0 && chatMsg.patterns.map((patterns,index)=>(
-                                                                                    <button onClick={()=>handleChat(patterns)} className='chat-button' key={index}>{patterns}</button>
+                                                                                chatMsg.options.length > 0 && chatMsg.options.map((option,index)=>(
+                                                                                    <button onClick={()=> !chatMsg.use_details ? handleChat(option, false) : handleChat(option, true)} className='chat-button' key={index}>{option.name ? option.name : option}</button>
                                                                                 ))
-                                                                            }
+                                                                                }
                                                                      </div>
                                                                     
 

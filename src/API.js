@@ -1,8 +1,8 @@
 
 import axios from "axios";
 
-//const api = 'http://127.0.0.1:5000/sms'
-const api = 'https://uirms.herokuapp.com/sms'
+const api = 'http://127.0.0.1:5000/sms'
+//const api = 'https://uirms.herokuapp.com/sms'
 
 const headers = {
     'Accept':'application/json'   
@@ -51,9 +51,31 @@ export const botUpdate=(data)=>
 
 export const chatBot=(msg)=>
         fetch(
-            `${api}/chat?message=${msg}`,
-            {headers},
+            `${api}/chat?message=${msg}`,{
+                    headers:{
+                        ...headers,
+                        'Content-Type': 'application/json',
+                        'Authorization' : 'Bearer ' + localStorage.getItem('token')
+                    }
+            }
+            
         ).then(res=>res.json()).then(data=>data)
+
+
+export const submitFeedBack=(data, jwt)=>
+    fetch(
+    `${api}/student/feedback`,
+        {
+            method:'POST',
+            headers:{
+                ...headers,
+                'Content-Type': 'application/json',
+                'Authorization' : 'Bearer ' + jwt
+            },
+            body: JSON.stringify(data)
+        }
+    ).then(res=>res.json()).then(data=>data.msg)
+
 
 
 export const login=(data)=>
@@ -78,19 +100,6 @@ export const getFeedbacks=()=>
     ).then(res=>res.json()).then(data=>data.feedbacks) 
 
 
-export const submitFeedBack=(data, jwt)=>
-        fetch(
-        `${api}/student/feedback`,
-        {
-            method:'POST',
-            headers:{
-                ...headers,
-                'Content-Type': 'application/json',
-                'Authorization' : 'Bearer ' + jwt
-            },
-            body: JSON.stringify(data)
-        }
-    ).then(res=>res.json()).then(data=>data.msg)
 
 
 export const getProfile=(jwt)=>
