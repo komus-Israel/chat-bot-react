@@ -29,7 +29,7 @@ const ViewChatLog=()=>{
     const handleGetFeedBack=async (matric_no)=>{
         setFetching(true)
         const log = await API.getLog(matric_no)
-        console.log(log)
+        setStudentLog(log)
         setFetching(false)
     }
 
@@ -57,12 +57,6 @@ const ViewChatLog=()=>{
                                                                         </div>
                                     }
                                         
-                                           
-                                                    
-                                                   
-                                            
-                                            
-                                    
                                 </div>
                                 
                             )

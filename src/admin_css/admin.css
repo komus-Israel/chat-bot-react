@@ -375,7 +375,8 @@
     }
 
     .fetch-log-cont {
-        width: 250px;
+        width: auto;
+        justify-content: center;
     }
 
     .view-log-main-cont {
