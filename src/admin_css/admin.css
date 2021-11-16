@@ -250,6 +250,49 @@
     border-radius: 5px;
 }
 
+.fetch-log-cont {
+    margin-left: auto 0;
+    height: 30px;
+    
+}
+
+.fetch-log-cont .search-student-log {
+    height: inherit;
+    border:1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+
+.fetch-log-cont .get-log {
+    height: 33px;
+    border: none;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    background-color: rgb(70, 14, 75);
+    color: white;
+    
+}
+
+.view-log-main-cont {
+    display: flex;
+    height: 100%;
+    width: 80%;
+    padding: 2em;
+    position: fixed;
+    justify-content: space-between;
+    margin: auto;
+    
+}
+
+.chat-log {
+    height: 100;
+    overflow: auto;
+    margin: auto;
+}
+
+
+
 
 @media only screen and (max-width:600px){
 
@@ -319,6 +362,32 @@
 
     .admin-board {
         margin-top: 0;
+    }
+
+    .view-log-main-cont {
+        flex-direction: column;
+    }
+
+    .fetch-log-cont {
+        width: 250px;
+    }
+
+    .view-log-main-cont {
+        margin: 0;
+        width: auto;
+        height: 90%;
+        justify-content: center;
+        align-items: center;
+        top:60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .chat-log {
+        top: 0;
+        left: 0;
+        margin: auto;
+        
     }
 
    

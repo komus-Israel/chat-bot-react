@@ -118,3 +118,11 @@ export const reTrainBot=()=>
                 `${api}/train-bot-with-no-update`,
                 {headers}
             ).then(res=>res.json()).then(data=>data.msg)
+
+export const getLog=(matric_no)=>
+    fetch(
+        `${api}/chat-log?matric_no=${matric_no}`,
+               {headers}
+    
+    ).then(res=>res.json()).then(data=>data.log)
+    

@@ -71,7 +71,7 @@
 
 }
 
-.flex-2 .chat-bot {
+.flex-2 .chat-bot, .chat-log {
     margin:1em;
     border:none;
     border-radius: 20px;
