@@ -24,11 +24,13 @@ const ViewChatLog=()=>{
 
     const [matric_no, setMatric_no] = useState('')
     const [studentLog, setStudentLog] = useState([])
+    const [fetching, setFetching] = useState(false)
 
     const handleGetFeedBack=async (matric_no)=>{
+        setFetching(true)
         const log = await API.getLog(matric_no)
         console.log(log)
-        setStudentLog(log)
+        setFetching(false)
     }
 
     
@@ -41,7 +43,7 @@ const ViewChatLog=()=>{
 
             <div className='chat-log'>
                 {
-                    studentLog.length > 0 && (
+                    (studentLog.length > 0 && !fetching) ? (
                         studentLog.map((log, index)=>{
                             return(
                                 <div key={index}>
@@ -65,7 +67,11 @@ const ViewChatLog=()=>{
                                 
                             )
                         })
-                    )
+                    ): 
+
+                    fetching ? <p className='fetching-log'>fetchin log .....</p> :
+
+                    (studentLog.length === 0 && !fetching) && <p className='fetching-log'>no logs</p>
                 }
             </div>
 

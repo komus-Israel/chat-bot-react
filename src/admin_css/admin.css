@@ -292,6 +292,12 @@
 }
 
 
+.fetching-log {
+    position: relative;
+    text-align: center;
+    color: rgba(0, 0, 0, .3);
+}
+
 
 
 @media only screen and (max-width:600px){
