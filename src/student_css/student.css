@@ -104,12 +104,13 @@
 
 .bot-message {
     
-    width: 180px;
+    width: 80%;
     font-size: 13px;
     border-radius: 20px;
     padding: 0.5em;
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
 }
+
 
 .student-message {
     background: rgb(48, 5, 89);

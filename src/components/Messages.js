@@ -42,7 +42,7 @@ const Messages=({msgs, handleChat})=>{
                                                                      <div>
                                                                             {
                                                                                 chatMsg.options.length > 0 && chatMsg.options.map((option,index)=>(
-                                                                                    <button onClick={()=> !chatMsg.use_details ? handleChat(option, false) : handleChat(option, true)} className='chat-button' key={index}>{option.name ? option.name : option}</button>
+                                                                                    <button onClick={()=>handleChat(option)} className='chat-button' key={index}>{option}</button>
                                                                                 ))
                                                                                 }
                                                                      </div>

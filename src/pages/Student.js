@@ -33,30 +33,14 @@ const Student=(props)=>{
     ]
     
    
-    const handleChat=async(msg, use_details)=>{
+    const handleChat=async(msg)=>{
         
-        
-        if (use_details === true){
-            await chats.push({sender:'student', message:msg.name})
-            await setMessage('')
+        await chats.push({sender:'student', message:msg})
+        await setMessage('')
+        const botMsg = await API.chatBot(msg)       
+        chats.push({sender:'bot', message:botMsg.response, options:botMsg.options})
+        setMessage(' ')
 
-            chats.push({sender:'bot', message:msg.details, options:[], use_details:false})
-            setMessage(' ')
-        } else {
-            await chats.push({sender:'student', message:msg})
-            await setMessage('')
-            const botMsg = await API.chatBot(msg)       
-            chats.push({sender:'bot', message:botMsg.response, options:botMsg.options, use_details:botMsg.use_details})
-            setMessage(' ')
-    
-            
-        }
-
-        
-
-
-       
-             
     } 
 
     useEffect(()=>{
