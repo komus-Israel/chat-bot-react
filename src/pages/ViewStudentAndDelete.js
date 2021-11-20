@@ -24,7 +24,7 @@ const ViewStudentAndDelete=()=>{
         setDeleting(true)
         const msg = await API.deleteStudent(matric_no)
         setDeleting(false)
-        
+
         setDeleteMsg(msg)
     }
 
@@ -34,7 +34,7 @@ const ViewStudentAndDelete=()=>{
 
             {
 
-                deleting ? <div className='modal' onClick={()=>setDeleteMsg('')}>
+                deleting ? <div className='modal'>
                                 <div className='training'>
                                     <img src='/images/loader.gif' alt='' height={100}/>
                                     <p>deleting student account ...</p>
