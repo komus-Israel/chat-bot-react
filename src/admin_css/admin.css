@@ -78,7 +78,7 @@
     font-weight: bolder;
 }
 
-.update-bot {
+.update-bot, .view-student-main-cont, .view-log-main-cont {
     display: flex;
     margin: auto;
     justify-content: center;
@@ -88,6 +88,7 @@
     width: 70%;
     border-radius: 10px;
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
+    height: 100%;
 
     
     
@@ -251,8 +252,9 @@
 }
 
 .fetch-log-cont {
-    margin-left: auto 0;
+
     height: 30px;
+    margin-bottom: auto;
     
 }
 
@@ -275,13 +277,9 @@
 }
 
 .view-log-main-cont {
-    display: flex;
-    height: 100%;
-    width: 80%;
-    padding: 2em;
-    position: fixed;
-    justify-content: space-between;
-    margin: auto;
+    
+    height: 400px;
+    
     
 }
 
@@ -298,6 +296,64 @@
     color: rgba(0, 0, 0, .3);
 }
 
+.search-student-cont input{
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.search-student-cont {
+    display: flex;
+}
+
+.search-student-cont p {
+    background: rgb(70, 14, 75);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.searched-students {
+    height: 300px;
+    width: 400px;
+    overflow: scroll;
+    margin-top: 20px;
+   
+}
+
+.searched-students::-webkit-scrollbar {
+    width: 0px;
+}
+
+.each-student {
+    display: flex;
+    border-radius: 12px;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.5);
+    width: 300px;
+    padding: 1em;
+    margin: auto;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+
+
+.delete-student {
+    font-size: 11px;
+    color: rgb(70, 14, 75);
+    font-weight: bold;
+    margin-left: auto;
+    cursor: pointer;
+    
+}
+
+.centralize {
+    text-align: center;
+}
 
 
 @media only screen and (max-width:600px){
@@ -375,11 +431,13 @@
     }
 
     .fetch-log-cont {
+        margin-bottom: 0;
         width: auto;
         justify-content: center;
     }
 
     .view-log-main-cont {
+        position: fixed;
         margin: 0;
         width: auto;
         height: 90%;
@@ -395,6 +453,55 @@
         left: 0;
         margin: auto;
         
+    }
+
+    .view-student-main-cont {
+        height: 100vh;
+        width: auto;
+        padding: 5px;
+       
+    }
+
+    .view-student-main-cont .view-student-sub {
+        background: white;
+        height: inherit;
+        width: auto;
+        margin-top: 1em;
+        margin-right: auto;
+
+    }
+
+    .search-student-cont input{
+
+        border-radius: 5px;
+        height: 10px;
+    }
+
+    .search-student-cont {
+        align-items: center;
+    }
+    
+    .search-student-cont p {
+        background: rgb(70, 14, 75);
+        color: white;
+        padding: 5px;
+        border: none;
+       border-radius: 5px;
+    }
+
+    .searched-students {
+        width: 100vw;
+        height: 100%;
+    }
+
+    .each-student {
+        display: flex;
+        border-radius: 12px;
+        box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.5);
+        width: auto;
+        padding: 1em;
+        margin-top: auto;
+        margin-right: auto;
     }
 
    

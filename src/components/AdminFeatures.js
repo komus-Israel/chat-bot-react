@@ -6,6 +6,7 @@ import UploadContent from "../pages/UploadContent";
 import UpdateBot from "../pages/UpdateBot";
 import FeedBack from "../pages/FeedBack";
 import ViewChatLog from "../pages/ViewChatLogs";
+import ViewStudentAndDelete from "../pages/ViewStudentAndDelete";
 
 
 const AdminFeature=()=>{
@@ -23,7 +24,8 @@ const AdminFeature=()=>{
         {name:'Update Chatbot Data', board: 'bot'},
         {name:'Upload Content', board: 'content'},  
         {name:'Feedbacks', board: 'feedback'},
-        {name:'View chat log', board: 'log'}
+        {name:'View chat log', board: 'log'},
+        {name:'Delete Account', board: 'delete'}
         
     ]
 
@@ -54,6 +56,7 @@ const AdminFeature=()=>{
                     board === 'content' ? <UploadContent />:
                     board === 'account' ? <CreateStudentAccount />:
                     board === 'log' ? <ViewChatLog />:
+                    board === 'delete' ? <ViewStudentAndDelete />:
                     board === 'feedback' && <FeedBack />
                 }
             </div>

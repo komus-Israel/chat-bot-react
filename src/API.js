@@ -125,4 +125,19 @@ export const getLog=(matric_no)=>
                {headers}
     
     ).then(res=>res.json()).then(data=>data.log)
+
+
+export const searchStudent=(param)=>
+    fetch(
+        `${api}/student/search?search=${param}`,
+            {headers}
+
+    ).then(res=>res.json()).then(data=>data.search_result)
+
+export const deleteStudent=(matric_no)=>
+        fetch(
+            `${api}/student/delete?matric_no=${matric_no}`,
+                {headers}
+
+        ).then(res=>res.json()).then(data=>data.msg)
     
