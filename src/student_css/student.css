@@ -299,6 +299,12 @@
         list-style: none;
         padding: 5px;
     }
+
+    .chat-log {
+        margin-bottom: auto;
+        height: 60%;
+         
+     }
     
 
 }
