@@ -46,8 +46,15 @@ const Student=(props)=>{
     useEffect(()=>{
         const jwt = localStorage.getItem('token')
         const getProfileFromApi = async()=>{
-            const profileResponse = await API.getProfile(jwt)
-            setProfile(profileResponse.student_profile)
+
+            try{
+                const profileResponse = await API.getProfile(jwt)
+                setProfile(profileResponse.student_profile)
+            } catch (err) {
+                localStorage.clear()
+            }
+            
+            
             
         }
 

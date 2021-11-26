@@ -96,7 +96,7 @@ export const login=(data)=>
 export const getFeedbacks=()=>
     fetch(
         `${api}/feedbacks`,
-        {headers},
+        {headers}
     ).then(res=>res.json()).then(data=>data.feedbacks) 
 
 
