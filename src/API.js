@@ -1,8 +1,8 @@
 
 import axios from "axios";
 
-//const api = 'http://127.0.0.1:5000/sms'
-const api = 'https://uirms.herokuapp.com/sms'
+const api = 'http://127.0.0.1:5000/sms'
+//const api = 'https://uirms.herokuapp.com/sms'
 
 const headers = {
     'Accept':'application/json'   
@@ -36,7 +36,8 @@ export const fileUpload=(data)=>
     .then(data=>data.msg)
 
 
-export const botUpdate=(data)=>
+export const botUpdate=(data)=> 
+    
         fetch(
             `${api}/train-bot`,
             {
@@ -48,6 +49,16 @@ export const botUpdate=(data)=>
                 body: JSON.stringify(data)
             }
         ).then(res=>res.json()).then(data=>data.msg)
+    /* catch (err) {
+        return new Promise((resolve, reject)=>{
+            resolve("bot updated successfully")
+        }).then(data=>data)
+         
+    */
+            
+
+
+
 
 export const chatBot=(msg)=>
         fetch(
