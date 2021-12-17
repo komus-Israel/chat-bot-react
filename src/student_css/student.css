@@ -111,6 +111,10 @@
     box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.8);
 }
 
+.bot-message a {
+    text-decoration: none;
+}
+
 
 .student-message {
     background: rgb(48, 5, 89);
@@ -158,6 +162,7 @@
 .send-chat {
     border: none;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .mobile {

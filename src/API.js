@@ -50,11 +50,7 @@ export const botUpdate=(data)=>
             }
         ).then(res=>res.json()).then(data=>data.msg)
     
-            
-
-
-
-
+   
 export const chatBot=(msg)=>
         fetch(
             `${api}/chat?message=${msg}`,{
